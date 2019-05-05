@@ -1,0 +1,1349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP请求默认值" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">172.16.5.127</stringProp>
+          <stringProp name="HTTPSampler.port">9020</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">content-type</stringProp>
+              <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">token</stringProp>
+              <stringProp name="Header.value">eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJsb2dpbiIsImlzcyI6IjczZGI1MWQzNWIxOTQyNThhOGMzZmUxZjY3OTJmYWU0IiwiYXVkIjoibHVtbSIsInVpZCI6MTEsInBlcm1pc3Npb25zIjp7IjAiOls0LDEwLDIwLDM1XSwiMzUiOls5NSwxMDMsMTA0LDEwOCwxMDksMTExLDExMiwxMTZdLCI0IjpbNDIsNDQsMTE3LDEzM10sIjEwNCI6WzEwNSwxMDYsMTA3XSwiNDIiOls0M10sIjEwIjpbNzBdLCI0NCI6WzQ1LDU1XSwiNDUiOls0Niw0Nyw0OCw0OSw1MCw1MSw1Miw1Myw1NF0sIjEwOSI6WzExMF0sIjExMiI6WzExMywxMTQsMTE1XSwiMjAiOls4MF0sIjU1IjpbNTYsNTcsNThdLCI5NSI6Wzk2LDk3LDk4LDk5LDEwMCwxMDEsMTAyXX0sInB1Ymxpc2hlck5hbWUiOiLljZflsbHljLrljZrnianppoYiLCJwb3J0cmFpdHNVcmwiOiIvb3BlbmFwaS92MS9kb3dubG9hZC1wb3J0cmFpdHM_ZmlsZVBhdGg9cG9ydHJhaXRzL2NuY2JveF8yMDE5MDQxNzAwMDAwMS5wbmciLCJ1bmlmaWNhdGlvbklkIjoiMTU1NTQ2NDg3ODc3ODQ3NTEiLCJuYW1lIjoi6bKB6IuX6IuX6bKBIiwiZXhwIjoxNTU2MjgwMDc4LCJpYXQiOjE1NTYyNTg0NzgsImVtYWlsIjoiIiwianRpIjoiYTU0MmQxNmY3MDNjNDcwMWEyMWQxNjY5MWEzOGVjNmEtMzUifQ.ab8mSDUekrcKSzJc_Se450rpGpc7Wi9j2zbGC6Cu0wd2gTgIMltu3ZczNHfUqWKWzTF363NKZxNqDi-Tc_xgsOOxKfgwZyQJYn9q2lpeCYAz3lVrCZvPldp3xhoQYoWEkivpDYF7odSiz1PalAWvdYDqDLO8Uy8hjK530LuPD2U</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="回收站接口" enabled="false"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="查询" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="token" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${token}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">token</stringProp>
+                </elementProp>
+                <elementProp name="page" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">page</stringProp>
+                </elementProp>
+                <elementProp name="pageSize" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pageSize</stringProp>
+                </elementProp>
+                <elementProp name="targetType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">resource</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">targetType</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/recycle/v1</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="删除至回收站" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">[&#xd;
+  {&#xd;
+    &quot;extraInfo&quot;: &quot;&quot;,&#xd;
+    &quot;menuPath&quot;: &quot;&quot;,&#xd;
+    &quot;targetId&quot;: &quot;E73037C7A700AB624EFB71C5400B6655&quot;&#xd;
+  }&#xd;
+]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/recycle/v1/resource</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="还原" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/recycle/v1/237?restore=true</stringProp>
+            <stringProp name="HTTPSampler.method">DELETE</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">237每次都累加，动态变化的，取targetId=id</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="彻底删除" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">uft-8</stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/recycle/v1/224?restore=false</stringProp>
+            <stringProp name="HTTPSampler.method">DELETE</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="清空回收站" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">uft-8</stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/recycle/v1/clear</stringProp>
+            <stringProp name="HTTPSampler.method">DELETE</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="目录库" enabled="false"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="新增目录" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+  &quot;menuName&quot;: &quot;新增接口001&quot;,&#xd;
+  &quot;menuType&quot;: &quot;resource&quot;,&#xd;
+  &quot;menuUuid&quot;: &quot;&quot;,&#xd;
+  &quot;pUuid&quot;: &quot;resource-15554648787784751-4&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/menu/v1</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">无uuid时新增，&quot;pUuid&quot;: &quot;resource-15554648787784751-4&quot;电子文本</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="正则表达式提取器" enabled="false">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">menuUuid</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;menuUuid&quot;:&quot;(.*)&quot;,&quot;pUuid&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">0</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="修改目录" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+  &quot;menuName&quot;: &quot;修改接口001&quot;,&#xd;
+  &quot;menuType&quot;: &quot;resource&quot;,&#xd;
+  &quot;menuUuid&quot;: &quot;${menuUuid}&quot;,&#xd;
+  &quot;pUuid&quot;: &quot;resource-15554648787784751-4&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/menu/v1</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">有uuid时新，修改，menuUuid 需要取新增的uuid</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="正则表达式提取器" enabled="false">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">id</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;id&quot;:(.*),&quot;unificationId&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">0</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="根据目录表主键ID查询" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/menu/v1/menu/${id}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">/menu/v1/menu/{id} </stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="查询单个目录信息" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/menu/v1/${menuUuid}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">/menu/v1/{menuUuid}</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="查询某一menuType的全部目录" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="pUuid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">resource-15554648787784751-4</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pUuid</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/menu/v1/resource/tree</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">查询电子文档所有目录,resultType显示模式:list(列表),tree(树形)，resource-15554648787784751-1、2、3图片、音频、视频</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="锁定目录" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/menu/v1/${menuUuid}/lock</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="解锁目录" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/menu/v1/${menuUuid}/unLock</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">/menu/v1/{menuUuid}/unLock </stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="删除目录信息" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/menu/v1/${menuUuid}</stringProp>
+            <stringProp name="HTTPSampler.method">DELETE</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">/menu/v1/{menuUuid}</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="设置-目录管理" enabled="false">
+          <stringProp name="TestPlan.comments">只有在 所有资源库没有加资源情况，可以导入模块</stringProp>
+        </GenericController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="下载模板" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/settings/v1/download?menuType=resource</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="导入模板" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/settings/v1/upload?menuType=resource</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="验证是否能导入" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/settings/v1/verification?menuType=resource</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="文件操作接口" enabled="false"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="查询文件详情" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/detail/5D123D5D103335BF6695C27B9575EF64</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">/file/v1/detail/{uuid}</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="根据统一账号查询电子文档" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="startTime" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">2019-04-28%2016%3A14%3A36</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">startTime</stringProp>
+                </elementProp>
+                <elementProp name="endTime" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">2019-04-28%2016%3A43%3A05</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">endTime</stringProp>
+                </elementProp>
+                <elementProp name="publisherUuid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">15554648787784751</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">publisherUuid</stringProp>
+                </elementProp>
+                <elementProp name="limit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">5</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">limit</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/document</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="文件批量导出??" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+&quot;uuids&quot;:[&quot;5AAD19E3A888C5F4B7B408F5F2DDB2FB&quot;,&quot;EAE3BCED49E83FF5AC295F8CE2F0A2A2&quot;]&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/export</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">批量导出，多个文件参数怎么写？？，老是提示： 系统错误，参数没弄对</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="导出未加密文件" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/export-decrypt-file-for-download/214820761252941BE8E45B949661E373</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="单个文件导出" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/export/214820761252941BE8E45B949661E373</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="查询可用于关联的文件列表" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="serverType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">unsigndoc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">serverType</stringProp>
+                </elementProp>
+                <elementProp name="menu" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">menu</stringProp>
+                </elementProp>
+                <elementProp name="fileType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">fileType</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/files-for-publication/15554648787784751?page=1&amp;rows=5</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="资源总览" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/getAllCount</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="excel导入文件信息（本地上传）？" enabled="false">
+            <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+              <collectionProp name="HTTPFileArgs.files">
+                <elementProp name="D:\jiekouTestData\本根服务器申请ISLI标志码资源列表.xls" elementType="HTTPFileArg">
+                  <stringProp name="File.path">D:\jiekouTestData\本根服务器申请ISLI标志码资源列表.xls</stringProp>
+                  <stringProp name="File.paramname">file</stringProp>
+                  <stringProp name="File.mimetype">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/importFilesByUploadExcel</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">提示：访问的地址不存在(excel表里的资源地址不存在)</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="excel导入文件信息（不用测试的接口）" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="fileName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">fileName</stringProp>
+                </elementProp>
+                <elementProp name="excelInBase64" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAPgADAP7/CQAGAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAEAAAIAAAAAEAAAD+////AAAAAAAAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9////IwAAAAMAAAAEAAAABQAAAAYAAAAHAAAACAAAAAkAAAAKAAAACwAAAAwAAAANAAAADgAAAA8AAAAQAAAAEQAAABIAAAATAAAAFAAAABUAAAAWAAAAFwAAABgAAAAZAAAAGgAAABsAAAAcAAAAHQAAAB4AAAAfAAAA/v////7///8iAAAAJAAAAP7////+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////1IAbwBvAHQAIABFAG4AdAByAHkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWAAUA//////////8CAAAAIAgCAAAAAADAAAAAAAAARgAAAAAAAAAAAAAAAGBNqPMn/tQBIQAAAEAEAAAAAAAAVwBvAHIAawBiAG8AbwBrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAgH///////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAASzsAAAAAAABFAFQARQB4AHQARABhAHQAYQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAACAQEAAAADAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqAgAAAAAAAAUAUwB1AG0AbQBhAHIAeQBJAG4AZgBvAHIAbQBhAHQAaQBvAG4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAIB/////wQAAAD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAAMAAAAAAAAAACQgQAAAGBQC7Dc0HwYABAAYGAADhAAIAsATBAAIAAADiAAAAXABwAAMAAYGc14LXgiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBCAAIAsARhAQIAAADAAQAAPQEGAAEAAgADABkAAgAAABIAAgAAABMAAgAAAK8BAgAAALwBAgAAAD0AEgAAAAAAgHCxMDgAAAAAAAEAWAJAAAIAAACNAAIAAAAiAAIAAAAOAAIAAQC3AQIAAADaAAIAAAAxABQA8AAAAP9/kAEAAAAAhgACAYtbU08xABQAAAAAAP9/kAEAAAAAhvACAYtbU08xABQAAAAAAP9/kAEAAAAAhvACAYtbU08xABQAAAAAAP9/kAEAAAAAhvACAYtbU08xABQA3AAAAAwAkAEAAAEAhgACAYtbU08xABQA3AAAACoAkAEAAAAAhgACAYtbU08xABQA3AAAAAgAkAEAAAAAhgACAYtbU08xABQA3AAAADYAvAIAAAAAhgACAYtbU08xABQA3AAAABQAkAEAAAEAhgACAYtbU08xABQA3AAAAAgAkAEAAAAAhgACAYtbU08xABQA3AAAAD4AkAEAAAAAhgACAYtbU08xABQA3AAAABAAkAEAAAAAhgACAYtbU08xABQALAEAADYAvAIAAAAAhgACAYtbU08xABQA3AAAAD8AvAIAAAAAhgACAYtbU08xABQA3AAAAAoAkAEAAAAAhgACAYtbU08xABQA3AAAADUAvAIAAAAAhgACAYtbU08xABQAaAEAADYAvAIAAAAAhgACAYtbU08xABQA3AACABcAkAEAAAAAhgACAYtbU08xABQABAEAADYAvAIAAAAAhgACAYtbU08xABQA3AAAADUAkAEAAAAAhgACAYtbU08xABQA3AAAAAkAvAIAAAAAhgACAYtbU08xABQA3AAAAAgAvAIAAAAAhgACAYtbU08xABQA3AAAABEAkAEAAAAAhgACAYtbU08xABQA3AAAABMAkAEAAAAAhgACAYtbU08eBCsABQATAAEiAOX/IgAjACwAIwAjADAAOwAiAOX/IgBcAC0AIwAsACMAIwAwAB4ENQAGABgAASIA5f8iACMALAAjACMAMAA7AFsAUgBlAGQAXQAiAOX/IgBcAC0AIwAsACMAIwAwAB4ENwAHABkAASIA5f8iACMALAAjACMAMAAuADAAMAA7ACIA5f8iAFwALQAjACwAIwAjADAALgAwADAAHgRBAAgAHgABIgDl/yIAIwAsACMAIwAwAC4AMAAwADsAWwBSAGUAZABdACIA5f8iAFwALQAjACwAIwAjADAALgAwADAAHgRpACoAMgABXwAgACIA5f8iACoAIAAjACwAIwAjADAAXwAgADsAXwAgACIA5f8iACoAIABcAC0AIwAsACMAIwAwAF8AIAA7AF8AIAAiAOX/IgAqACAAIgAt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ABQAAwAAAAEAAAAAAAAAAAAAAA4ABQACfQhBAH0IAAAAAAAAAAAAAAAAMwAAAAMABAAUAAMAzEwEAAAAAAAAAAAAAAANABQAAwAAAAEAAAAAAAAAAAAAAA4ABQACfQhBAH0IAAAAAAAAAAAAAAAANAAAAAMABAAUAAMAZWYFAAAAAAAAAAAAAAANABQAAwAAAAEAAAAAAAAAAAAAAA4ABQACfQhBAH0IAAAAAAAAAAAAAAAANQAAAAMABAAUAAMAzEwFAAAAAAAAAAAAAAANABQAAwAAAAEAAAAAAAAAAAAAAA4ABQACfQhBAH0IAAAAAAAAAAAAAAAANgAAAAMABAAUAAMAAAAGAAAAAAAAAAAAAAANABQAAwAAAAAAAAAAAAAAAAAAAA4ABQACfQhBAH0IAAAAAAAAAAAAAAAANwAAAAMABAAUAAMAAAAHAAAAAAAAAAAAAAANABQAAwAAAAAAAAAAAAAAAAAAAA4ABQACfQhBAH0IAAAAAAAAAAAAAAAAOAAAAAMABAAUAAMAZWYHAAAAAAAAAAAAAAANABQAAwAAAAEAAAAAAAAAAAAAAA4ABQACfQhBAH0IAAAAAAAAAAAAAAAAOQAAAAMABAAUAAMAzEwHAAAAAAAAAAAAAAANABQAAwAAAAEAAAAAAAAAAAAAAA4ABQACfQhBAH0IAAAAAAAAAAAAAAAAOgAAAAMABAAUAAMAAAAIAAAAAAAAAAAAAAANABQAAwAAAAAAAAAAAAAAAAAAAA4ABQACfQhBAH0IAAAAAAAAAAAAAAAAOwAAAAMABAAUAAMAzEwIAAAAAAAAAAAAAAANABQAAwAAAAEAAAAAAAAAAAAAAA4ABQACfQhBAH0IAAAAAAAAAAAAAAAAPAAAAAMABAAUAAMAMjMIAAAAAAAAAAAAAAANABQAAwAAAAAAAAAAAAAAAAAAAA4ABQACfQhBAH0IAAAAAAAAAAAAAAAAPQAAAAMABAAUAAMAAAAJAAAAAAAAAAAAAAANABQAAwAAAAAAAAAAAAAAAAAAAA4ABQACfQhBAH0IAAAAAAAAAAAAAAAAPgAAAAMABAAUAAMAzEwJAAAAAAAAAAAAAAANABQAAwAAAAEAAAAAAAAAAAAAAA4ABQACfQhBAH0IAAAAAAAAAAAAAAAAPwAAAAMABAAUAAMAMjMJAAAAAAAAAAAAAAANABQA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CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFUAAgAIAAACDgAAAAAAAAAAAAAAAAAAAD4CEgC2AAAAAABAAAAAZAAAAAAAAAAdAA8AAwAAAAAAAAEAAAAAAAAAmQACAAAJZwgXAGcIAAAAAAAAAAAAAAIAAf////8DRAAACgAAAAkIEAAABhAAuw3NB8GAAQAGBgAACwIQAAAAAAAAAAAAAAAAACUHAAANAAIAAQAMAAIAZAAPAAIAAQARAAIAAAAQAAgA/Knx0k1iUD9fAAIAAQAqAAIAAAArAAIAAACCAAIAAQCAAAgAAAAAAAAAAAAlAgQAAAAdAYEAAgDBBBQAAAAVAAAAgwACAAAAhAACAAAAJgAIAAAAAAAAAOg/JwAIAAAAAAAAAOg/KAAIAAAAAAAAAPA/KQAIAAAAAAAAAPA/oQAiAAkAZAABAAEAAQACAAAAAABSuB6F61HgP1K4HoXrUeA/AQCcCCYAnAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABVAAIACAAAAg4AAAAAAAAAAAAAAAAAAAA+AhIAtgAAAAAAQAAAAGQAAAAAAAAAHQAPAAMAAAAAAAABAAAAAAAAAJkAAgAACWcIFwBnCAAAAAAAAAAAAAACAAH/////A0QAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAD+////CgAAAAsAAAD+////DQAAAA4AAAAPAAAAEAAAAP7///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8JCBAAAQYAD5oC1QcAAAAACAAAAPsPDgJbFRNFQQD///8BAADA/wAAAAAAAMD/AAAAAAAAwP8AAAAAAADA/wAAAAAAAMD/AAAAAAAAwP8AAAAAAADA/wAAAAAAAMD/AAAAAAAAwP8AAAAAAADA/wAAAAAAAMD/AAAAAAAAwP8AAAAAAADA/wAAAAAAAMD/AAAAAAAAwP8AAAAAAAAAAAAAAAEAAAAAAADgAAAAwP8AnucAAADA/wAAAAEAAAAAAAAAAQAAAAAAAOAAAADA/wAA4AAAAMD/AAAAAQAAAAAAAOAAAADA/wAAAAAAAMD/AAAAAQAAAAAAAAAAAADA/wCe5wAAAAAAAADgAAAAwP8AAAAAAADA/wAAAAAAAMD/AAAAAAAAwP8AAAAAAADA/wAQBAAAAMD/ABAEAAAAwP8AAOAAAADA/wAQBAAAAMD/AADgAAAAwP8AnucAAADA/wCe5wAAAMD/AJ7nAAAAwP8AAOAAAADA/wAA4AAAAMD/ABAEAAAAwP8AGAYAAADA/wAA4AAAAMD/AADgAAAAwP8AAOAAAADA/wAA4AAAAMD/AADgAAAAwP8AAOAAAADA/wAA4AAAAMD/AADgAAAAwP8AAOAAAADA/wAA4AAAAMD/AADgAAAAwP8AAOAAAADA/wAA4AAAAMD/AADgAAAAwP8AAOAAAADA/wAA4AAAAMD/AADgAAAAwP8AAOAAAADA/wAAAAAAAAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+/wAABgECAAAAAAAAAAAAAAAAAAAAAAABAAAA4IWf8vlPaBCrkQgAKyez2TAAAACQAAAABgAAAAEAAAA4AAAAAAAAgEAAAAAIAAAASAAAAAwAAABYAAAADQAAAGQAAAASAAAAcAAAAAIAAACwBAAAEwAAAAQIAAAfAAAAAwAAAIGc14IAAAAAQAAAAIAR3xIqQNQBQAAAAADwUfMn/tQBHwAAAAsAAABXAFAAUwAgAE8AZgBmAGkAYwBlAAAAAAD+/wAABgECAAAAAAAAAAAAAAAAAAAAAAACAAAAAtXN1ZwuGxCTlwgAKyz5rkQAAAAF1c3VnC4bEJOXCAArLPmujAAAAEgAAAAEAAAAAQAAACgAAAAAAACAMAAAAAsAAAA4AAAAEAAAAEAAAAACAAAAsAQAABMAAAAECAAACwAAAAAAAAALAAAAAAAAAJgAAAAEAAAAAAAAACgAAAABAAAAXAAAAAAAAIBkAAAAAgAAAGwAAAABAAAAAgAAABMAAABLAFMATwBQAHIAbwBkAHUAYwB0AEIAdQBpAGwAZABWAGUAcgAAAAAAAgAAALAEAAATAAAABAgAAB8AAAARAAAABQBEAG8AYwB1AG0AZQBuAHQAUwB1AG0AbQBhAHIAeQBJAG4AZgBvAHIAbQBhAHQAaQBvAG4AAAAAAAAAAAAAADgAAgD///////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAJAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyADAANQAyAC0AMQAxAC4AMQAuADAALgA4ADYAMQAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">excelInBase64</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/importFilesFromExcel</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">excelInBase64 抓包可获取到</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="查询文件列表" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/list?page=1&amp;rows=10</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="根据统一账号查询素材" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/material?startTime=2019-04-28%2016%3A14%3A36&amp;endTime=2019-04-28%2016%3A43%3A05&amp;publisherUuid=15554648787784751&amp;limit=5</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="文件移动到指定目录下" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+  &quot;menuUuid&quot;: &quot;4354FD4895EA4DC526C85E9FE6A420BC-1&quot;,&#xd;
+  &quot;uuids&quot;: [&#xd;
+    &quot;42C973EB415296E9E73F9E74A1B60F5C&quot;&#xd;
+  ]&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/moveFiles</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="根据时间段,查询不同类型资源 存贮数量" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="startTime" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">2019-04-28%2015%3A46%3A07</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">startTime</stringProp>
+                </elementProp>
+                <elementProp name="endTime" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">2019-04-28%2016%3A37%3A47</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">endTime</stringProp>
+                </elementProp>
+                <elementProp name="type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">4</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">type</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/resource-number</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">2019-04-28 15:46:07----2019-04-28 16:37:47，type 1图片 2音频 3视频 4电子文本</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="统计资源（按日）" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+&quot;statsWay&quot;:&quot;1&quot;,&#xd;
+&quot;startDate&quot;:&quot;2019-04-30&quot;,&#xd;
+&quot;endDate&quot;:&quot;2019-04-30&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/resourcesStatistics</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">statsWay  1：日，2：月，3 年  时间只要年月日</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="统计资源（按月）" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+&quot;statsWay&quot;:&quot;2&quot;,&#xd;
+&quot;startDate&quot;:&quot;2019-04-01&quot;,&#xd;
+&quot;endDate&quot;:&quot;2019-04-30&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/resourcesStatistics</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">statsWay  1：日，2：月，3 年 ，时间只要年月日</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="统计资源（按年）" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+&quot;statsWay&quot;:&quot;3&quot;,&#xd;
+&quot;startDate&quot;:&quot;2019-01-01&quot;,&#xd;
+&quot;endDate&quot;:&quot;2020-01-01&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/resourcesStatistics</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">statsWay  1：日，2：月，3 年  时间只要年月日</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="文件上传、导出" enabled="false"/>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV 数据文件设置" enabled="false">
+            <stringProp name="filename">E:/WorkSpace/JmeterWork/jiekouTestData/dataPNGduoge.csv</stringProp>
+            <stringProp name="fileEncoding">UTF-8</stringProp>
+            <stringProp name="variableNames">path</stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="文件上传（图片）" enabled="false">
+            <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+              <collectionProp name="HTTPFileArgs.files">
+                <elementProp name="E:\WorkSpace\JmeterWork\jiekouTestData\PNGTest.png" elementType="HTTPFileArg">
+                  <stringProp name="File.path">E:\WorkSpace\JmeterWork\jiekouTestData\PNGTest.png</stringProp>
+                  <stringProp name="File.paramname">file</stringProp>
+                  <stringProp name="File.mimetype">image/png</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/uploadFile/unsigndoc</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">服务类型(本根仓:signeddoc,存储仓:unsigndoc,关联目标池:targetpool)</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="正则表达式提取器" enabled="false">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">uuid</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;data&quot;:&quot;(.*)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">0</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="文件上传（电子文本）" enabled="false">
+            <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+              <collectionProp name="HTTPFileArgs.files">
+                <elementProp name="D:\jiekouTestData\test001.xlsx" elementType="HTTPFileArg">
+                  <stringProp name="File.path">D:\jiekouTestData\test001.xlsx</stringProp>
+                  <stringProp name="File.paramname">file</stringProp>
+                  <stringProp name="File.mimetype">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet </stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/uploadFile/unsigndoc</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">服务类型(本根仓:signeddoc,存储仓:unsigndoc,关联目标池:targetpool)</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="在指定目录下上传文件" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/uploadFile/unsigndoc/E3680CBDEAD6CD9CF815868B9420FB04-4</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="修改文件（新增完不能立马修改）有Md5 ISLI标志码后才能改，后期优化，先不测试此接口" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+  &quot;auditStatus&quot;: &quot;&quot;,&#xd;
+  &quot;baseSystem&quot;: &quot;&quot;,&#xd;
+  &quot;baseSystemUuid&quot;: &quot;&quot;,&#xd;
+  &quot;complete&quot;: true,&#xd;
+  &quot;content&quot;: &quot;&quot;,&#xd;
+  &quot;contentCheckResult&quot;: &quot;&quot;,&#xd;
+  &quot;contentCheckStatus&quot;: 0,&#xd;
+  &quot;contentCheckTime&quot;: &quot;&quot;,&#xd;
+  &quot;copyrightDurationEnd&quot;: &quot;2019-04-30 15:29:17&quot;,&#xd;
+  &quot;copyrightDurationStart&quot;: &quot;2019-04-29 15:29:17&quot;,&#xd;
+  &quot;copyrightOwner&quot;: &quot;ghj1&quot;,&#xd;
+  &quot;copyrightOwnerShip&quot;: &quot;ghj1&quot;,&#xd;
+  &quot;copyrightRegNo&quot;: &quot;ghj2&quot;,&#xd;
+  &quot;copyrightStatement&quot;: &quot;ghj&quot;,&#xd;
+  &quot;delApplyReplyResult&quot;: &quot;&quot;,&#xd;
+  &quot;delApplyReplyTime&quot;: &quot;&quot;,&#xd;
+  &quot;delApplyTime&quot;: &quot;&quot;,&#xd;
+  &quot;errorDesc&quot;: &quot;ghjghjghj&quot;,&#xd;
+  &quot;extraInfo&quot;: &quot;&quot;,&#xd;
+  &quot;fileAuthor&quot;: &quot;lumm&quot;,&#xd;
+  &quot;fileMd5&quot;: &quot;&quot;,&#xd;
+  &quot;fileName&quot;: &quot;PNGTest修改&quot;,&#xd;
+  &quot;fileSize&quot;: 0,&#xd;
+  &quot;fileType&quot;: 0,&#xd;
+  &quot;isCoverImage&quot;: 0,&#xd;
+  &quot;isliCode&quot;: &quot;&quot;,&#xd;
+  &quot;isliCodeApplyReplyResult&quot;: &quot;&quot;,&#xd;
+  &quot;isliCodeApplyReplyTime&quot;: &quot;&quot;,&#xd;
+  &quot;isliCodeApplyTime&quot;: &quot;&quot;,&#xd;
+  &quot;isliCodeValid&quot;: true,&#xd;
+  &quot;isprivate&quot;: 0,&#xd;
+  &quot;menuUuid&quot;: &quot;&quot;,&#xd;
+  &quot;metadataCloudDataFill&quot;: true,&#xd;
+  &quot;metadataCloudType&quot;: &quot;&quot;,&#xd;
+  &quot;processMsg&quot;: &quot;&quot;,&#xd;
+  &quot;publishStatus&quot;: &quot;&quot;,&#xd;
+  &quot;relation&quot;: {&#xd;
+    &quot;extraInfo&quot;: &quot;&quot;,&#xd;
+    &quot;fileName&quot;: &quot;&quot;,&#xd;
+    &quot;fileUuid&quot;: &quot;&quot;,&#xd;
+    &quot;isliCode&quot;: &quot;&quot;,&#xd;
+    &quot;menuUuid&quot;: &quot;&quot;,&#xd;
+    &quot;relationIsliCode&quot;: &quot;&quot;,&#xd;
+    &quot;relationType&quot;: &quot;&quot;,&#xd;
+    &quot;sourceCode&quot;: &quot;&quot;,&#xd;
+    &quot;sourceUuid&quot;: &quot;&quot;,&#xd;
+    &quot;targetCode&quot;: &quot;&quot;,&#xd;
+    &quot;unificationId&quot;: &quot;&quot;&#xd;
+  },&#xd;
+  &quot;relevanceCode&quot;: &quot;&quot;,&#xd;
+  &quot;statusIsliCodeApply&quot;: &quot;&quot;,&#xd;
+  &quot;tags&quot;: &quot;&quot;,&#xd;
+  &quot;unsigndocFileUuid&quot;: &quot;&quot;,&#xd;
+  &quot;uuid&quot;: &quot;${data}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/update</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="单个文件导出" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="fileName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">PNGTest</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">fileName</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/export/${uuid}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="正则表达式提取器" enabled="false">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">filePath</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;filePath&quot;:&quot;(.*)&quot;,&quot;baseSystem&quot;:&quot;(.*?)&quot;,&quot;fileMd5&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="打开导出地址（（导出后的文件 损坏了，不知道为什么？？））" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">${filePath}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell 取样器" enabled="false">
+            <stringProp name="BeanShellSampler.query">import java.io.*;
+byte[] result = prev.getResponseData();  //这个是获取到请求返回的数据，prev是获取上个请求的返回
+String file_name = &quot;E:\\WorkSpace\\JmeterWork\\jiekouTestData\\testPNG\\daochuPath\\PNGTest.png&quot;; //代表存放文件的位置和文件名
+File file = new File(file_name);
+FileOutputStream out = new FileOutputStream(file);
+out.write(result);
+out.close();
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="false">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">import java.io.*;
+byte[] result=prev.getResponseData(); //这个是获取到请求返回的数据，prev是获取上个请求的返回
+String file_name=&quot;D:/jiekouTestData/testPNG/daochuPath/PNGTest.png&quot;;  //代表存放文件的位置和文件名
+File file=new File(file_name);
+FileOutputStream out new FileOutputStream(file);
+out.write(result);
+out.close();</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="false">
+          <boolProp name="LoopController.continue_forever">true</boolProp>
+          <stringProp name="LoopController.loops">2</stringProp>
+        </LoopController>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV 数据文件设置" enabled="false">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">D:\jiekouTestData\dataPNGduoge.csv</stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">status</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="文件上传（图片）" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="file" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${status}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">file</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rmsResources/file/v1/uploadFile/unsigndoc</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">服务类型(本根仓:signeddoc,存储仓:unsigndoc,关联目标池:targetpool)</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="false">
+              <stringProp name="JSONPostProcessor.referenceNames">status1</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.status</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1371298324">${status}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+              <stringProp name="Assertion.scope">variable</stringProp>
+              <stringProp name="Scope.variable">status1</stringProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="资源管理" enabled="false"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="云平台" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path"></stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
